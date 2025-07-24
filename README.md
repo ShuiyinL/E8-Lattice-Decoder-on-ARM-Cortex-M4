@@ -1,4 +1,4 @@
-# E8-Lattice-Decoder-on-ARM-Cortex-M4
+# E8-Lattice-Decoder-on-ARM-Cortex-M4 and Decryption Failure Attack Estimator
 This repository evaluates the clock cycle performance of E8 lattice decoder [1] on an ARM Cortex-M4 processor using the STM32L412KB (NUCLEO-L412KB, Cortex-M4 at 80 MHz) development board.
 - For reference, we have also provided the implementation on the ARM Fixed Virtual Platform (FVP): ARM_FVP_E8DecoderCycleCount.c.
 
