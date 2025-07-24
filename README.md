@@ -1,14 +1,16 @@
-# E8-Lattice-Decoder-on-ARM-Cortex-M4 and Decryption Failure Attack Estimator
-This repository evaluates the clock cycle performance of E8 lattice decoder [1] on an ARM Cortex-M4 processor using the STM32L412KB (NUCLEO-L412KB, Cortex-M4 at 80 MHz) development board.
+# E8-Lattice-Decoder-on-ARM-Cortex-M4, Decryption Failure Attack Estimator, and MMSE Quantization
+1. This repository evaluates the clock cycle performance of E8 lattice decoder [1] on an ARM Cortex-M4 processor using the STM32L412KB (NUCLEO-L412KB, Cortex-M4 at 80 MHz) development board.
 - For reference, we have also provided the implementation on the ARM Fixed Virtual Platform (FVP): ARM_FVP_E8DecoderCycleCount.c.
 
-The decryption failure attack estimation for P_l Kyber are also included. The software used for this analysis [2] is available in: https://github.com/KULeuven-COSIC/PQCRYPTO-decryption-failures/tree/master/DecryptionFailureAttack
+2. The decryption failure attack estimation for P_l Kyber are also included. The software used for this analysis [2] is available in: https://github.com/KULeuven-COSIC/PQCRYPTO-decryption-failures/tree/master/DecryptionFailureAttack
 - copy "P_Kyber_failureboost.py", "Parameters_P_Kyber.py", "Cv4.mat", and "Cv5.mat" to the folder "DecryptionFailureAttack"
 - run "P_Kyber_failureboost.py"
 - For reference, the precomputed values of α and β are stored in the files named "P_KyberXXXX.pkl" or "KyberXXXX.pkl"
 
-MATLAB codes for MMSE quantization are also provided. MMSE quantization can be used to replace the original Kyber quantization function, as it yields a smaller quantization noise variance [3]. 
+3. MATLAB codes for MMSE quantization are also provided. MMSE quantization can be used to replace the original Kyber quantization function, as it yields a smaller quantization noise variance [3]. 
 - run "MMSE_Quantization.m"
+  - MATLAB function for Lloyd-Max algorithm : [partition,codebook] = lloyds(training_set,len)
+  - https://au.mathworks.com/help/comm/ref/lloyds.html 
 - For comparison, the performance of the original Kyber quantization is also tested in "MMSE_Quantization.m"
 
 
