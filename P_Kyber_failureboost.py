@@ -104,6 +104,10 @@ for i in toplot:
     with open(i['name'] + "-2.pkl", "wb") as f:
         pickle.dump([alpha, beta], f)
 
+for i in toplot:
+    with open(i['name'] + "-2.pkl", "rb") as f:
+        alpha, beta = pickle.load(f)
+
 workforonefailure = np.log2([ sqrt(a) * b**-1 for a,b in zip(alpha, beta)])
 place = np.log2(beta[np.argmin(workforonefailure)])
 print ('failure boosting cost: 2^' + str(min(workforonefailure)) + ' at DFR: 2^' + str(place))
