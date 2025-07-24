@@ -49,4 +49,9 @@ MMSE_quantization_noise_probability=pmf_Ll
 var_MMSE_quantization_noise=Ll_range.^2*pmf_Ll'
 %save Cudx.mat  pmf_Ll Ll_range
 
+%%% Example of quantizing a ciphertext coefficent x = 10
+fprintf('Example of MMSE quantizaing a ciphertext coefficent x = 10 \n')
+x=10;
+[x_index,x_quants] = quantiz(x,partition,codebook)
+Recover_x_quants=codebook(x_index+1)
 
