@@ -5,7 +5,7 @@ This repository evaluates the clock cycle performance of E8 lattice decoder [1] 
 The decryption failure attack estimation for P_l Kyber are also included. The software used for this analysis [2] is available in: https://github.com/KULeuven-COSIC/PQCRYPTO-decryption-failures/tree/master/DecryptionFailureAttack
 - copy "P_Kyber_failureboost.py", "Parameters_P_Kyber.py", "Cv4.mat", and "Cv5.mat" to the folder "DecryptionFailureAttack"
 - run "P_Kyber_failureboost.py"
-- For refetrence, the precomputed alpha and beta are stored in "P_KyberXXXX.pkl" or "KyberXXXX.pkl" file
+- For reference, the precomputed values of α and β are stored in the files named "P_KyberXXXX.pkl" or "KyberXXXX.pkl"
 
 
 [1] Conway, J., Sloane, N.: Fast quantizing and decoding and algorithms for lattice quantizers and codes. IEEE Transactions on Information Theory 28(2), 227–232 (1982). https://doi.org/10.1109/TIT.1982.1056484
